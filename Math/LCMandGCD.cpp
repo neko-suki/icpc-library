@@ -1,6 +1,6 @@
 //LCM and GCD
 
-//w > m が涩妥
+//w > m が前提
 /*
   int gcd(int w,int m){
   if ( m == 0)return w;

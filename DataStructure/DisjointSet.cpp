@@ -14,6 +14,9 @@ public:
   DisjointSet(int size){
     rank.resize(size,0);
     p.resize(size,0);
+    for(int i =0;i < size;i++){
+      make_set(i);
+    }
   }
   void make_set(int x){
     p[x]=x;

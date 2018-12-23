@@ -48,6 +48,14 @@ inline ll modmul(ll a,ll b){a %= mod;b %= mod;return (a*b)%mod;}
 inline ll modeq(ll a,ll b,ll m){a = (a%m+m)%m; b = (b%m+m)%m;return a == b;}
 //ll modpow(ll n,ll p){if (p == 0)return 1;if (p == 1)return n;ll ret=mypow(n,p/2);ret=ret*ret%mod;if (p&1)ret=ret*n%mod;return ret;}
 //ll getinv(ll a){return mypow(a,mod-2);}
+ll mypow(ll n,ll p){
+  if (p == 0)return 1;
+  if (p == 1)return n;
+  ll ret=mypow(n,p/2);
+  ret=ret*ret;
+  if (p&1)ret=ret*n;
+  return ret;
+}
  
 int main(){
  
